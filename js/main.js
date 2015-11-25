@@ -145,7 +145,7 @@ $(function() {
 				id: i
 			}, { allowScriptAccess: "always" });
 		} else {
-			$.post('save.php', {
+			$.post('//package.su/mdk/save', {
 				viewer_id: query['viewer_id'],
 				auth_key: query['auth_key'],
 				api_id: query['api_id'],
