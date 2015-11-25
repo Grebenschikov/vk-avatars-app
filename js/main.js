@@ -178,7 +178,7 @@ $(function() {
 
 	try {
 		var photo = JSON.parse(query['api_result']).response[0]['photo_max_orig'];
-		if (!(/^https?\:\/\/vk.com\//.test(photoURL))) photoURL = photo;
+		if (!(/^https?\:\/\/vk.com\//.test(photo))) photoURL = photo;
 	} catch (_) { }
 
 	avatar.css('background-image', 'url("' + photoURL + '")');
