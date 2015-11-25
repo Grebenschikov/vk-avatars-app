@@ -40,6 +40,8 @@ $(function() {
 	})
 
 	$('#submiter').click(function() {
+		$('#submiter').find('span').css('visibility', 'hidden');
+		$('#submiter').find('img').css('visibility', 'visible');
 		createImage(function(img) {
 			VK.api('photos.getOwnerPhotoUploadServer', function(data) {
 				var url
@@ -113,9 +115,6 @@ $(function() {
 	} 
 
 	function sendFile(url, img, cb) {
-		$('#submiter').find('span').css('visibility', 'hidden');
-		$('#submiter').find('img').css('visibility', 'visible');
-		
 		function _cb(data) {
 			$('#submiter').find('span').css('visibility', 'visible');
 			$('#submiter').find('img').css('visibility', 'hidden');
