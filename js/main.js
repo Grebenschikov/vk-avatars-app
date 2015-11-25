@@ -29,7 +29,13 @@ $(function() {
 
 	$('#saver').click(function() {
 		createImage(function(data) {
-			$('<a />').attr({href: data, download: "ava.png", target: "frm"})[0].click();
+			if (/^((?!chrome|android).)*safari/i.test(navigator.userAgent)) {
+				parent.location.href = data;
+			} else {
+				var anchor = $('<a />').attr({href: data, download: "ava.png", target: "frm"}).appendTo(utils);
+				anchor[0].click()
+				anchor.remove();
+			}
 		})
 	})
 
