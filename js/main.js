@@ -72,6 +72,13 @@ $(function() {
 		})
 	})
 
+	$('#share').click(function() {
+		VK.api('wall.post', {
+			message: "#ударВСпину",
+			attachments: "http://vk.com/app5161776,photo199142634_389374637"
+		});
+	})
+
 	mark.on('mousedown', function() {
 		canmove = true
 	})
