@@ -74,7 +74,6 @@ $(function() {
 
 	avatar.on('mousemove', function(e) {
 		if (canmove) {
-			console.log(e);
 			mark.css({top: e.clientY - 30 - mark.height()/2, left: e.clientX - 20 - mark.width()/2});
 		}
 	})
@@ -123,7 +122,6 @@ $(function() {
 			var div = $('<div />', {id: "loader" + i}).appendTo(utils);
 			callbacks[i] = function(id, type, data) {
 				if (type == 'inited') {
-					console.log('Inited', id);
 					return
 				} else if (type == 'success') {
 					try {
@@ -152,7 +150,6 @@ $(function() {
 				url: url,
 				img: img
 			}, function(data) {
-				console.log(data);
 				_cb(data.response ? data.response : null)
 			}).fail(function() {
 				_cb(null)
@@ -160,8 +157,16 @@ $(function() {
 		}
 	}
 
-	function showError() {
-		alert('Ошибка')
+	function showError(type) {
+		var errors = {
+
+		};
+
+		$('.error').html(errors[type] || "Ошибка. Попробуйте позже.").show(200, function() {
+			setTimeout(function() {
+				$(this).hide(200);
+			}.bind(this), 2000);
+		});
 	}
 
 	location.search.substr(1).split("&").forEach(function(item) {
