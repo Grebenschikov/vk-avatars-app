@@ -29,7 +29,11 @@ $(function() {
 
 	$('#saver').click(function() {
 		createImage(function(data) {
-			$('<a />').attr({href: data, download: "ava.png"})[0].click();
+			if (window.chrome) {
+				$('<a />').attr({href: data, download: "ava.png", target: "_blank"})[0].click();
+			} else {
+				window.open(data, "_blank");
+			}
 		})
 	})
 

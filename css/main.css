@@ -61,6 +61,10 @@ button:last-child {
 	visibility: hidden;
 }
 
+.error {
+	display: none;
+}
+
 .utils {
 	visibility: hidden;
 	position: absolute;
