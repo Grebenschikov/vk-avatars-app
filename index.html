@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>VK Avatars App</title>
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+	<div class="utils"></div>
+	<div class="container">
+		<div class="col-xs-6 col-md-6 wrap">
+			<div class="avatar">
+				<div class="mark"></div>
+			</div>
+		</div>
+		<div class="col-xs-6 wrap">
+			<div class="row">
+				<div class="col-xs-4">
+					<a href="javascript://" class="thumbnail">
+						<img src="img/mark_right.png">
+					</a>
+				</div>
+				<div class="col-xs-4">
+					<a href="javascript://" class="thumbnail current">
+						<img src="img/mark_center.png">
+					</a>
+				</div>
+				<div class="col-xs-4">
+					<a href="javascript://" class="thumbnail">
+						<img src="img/mark_left.png">
+					</a>
+				</div>
+			</div>
+		
+			<div class="form-group">
+				<label for="rotator">Поворот</label>
+				<input type="range" min="0" max="360" id="rotator">
+			</div>
+
+			<div class="form-group">
+				<div class="checkbox"><label> <input type="checkbox" id="backer" checked>Показать подложку </label></div>
+			</div>
+
+			<div class="form-group">
+				<button class="btn btn-success" id="submiter">
+					<img class="loader" src="img/load.gif">
+					<span class="text">На аватар!</span>
+				</button>
+				<button class="btn btn-warning" id="saver">Сохранить как файл</button>
+			</div>
+
+			<div class="copy">
+				Вечная память.<br>
+				<a href="http://mdk.is" target="_blank">MDK Inc.</a>
+			</div>
+		</div>
+	</div>
+	<script src="//vk.com/js/api/xd_connection.js?2"></script>
+	<script src="js/swfobject.js"></script>
+	<script src="js/jquery.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>

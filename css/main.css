@@ -1,0 +1,71 @@
+html, body {
+	height: 100%;
+
+	-webkit-user-select: none;	
+	-moz-user-select: none;	 
+	-ms-user-select: none;	 
+	user-select: none;
+}
+
+.container {
+	margin-top: 20px;
+}
+
+.container, .wrap {
+	height: 100%;
+}
+
+.avatar {
+	text-align: center;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.mark {
+	position: relative;
+	width: 35px;
+	height: 50px;
+	top: 30px;
+	left: 30px;
+	background-image: url('../img/mark_center.png');
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+	resize: both;
+	overflow: auto;
+	background-color: rgba(255, 255, 255, 0.3);
+}
+
+.mark.clean {
+	background-color: rgba(255, 255, 255, 0) !important;
+}
+
+button:last-child {
+	float: right;
+}
+
+.thumbnail.current {
+	border: 1px solid #337ab7;
+}
+
+.copy {
+	text-align: center;
+}
+
+.loader {
+	height: 20px; 
+	margin-left: 25px; 
+	position: absolute;
+	visibility: hidden;
+}
+
+.utils {
+	visibility: hidden;
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	top: -1000px;
+	left: -1000px;
+}
